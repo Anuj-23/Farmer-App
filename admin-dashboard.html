@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    <h3>Post Crop Details</h3>
+    <form id="cropForm">
+        <input type="text" id="cropName" placeholder="Crop Name" required>
+        <input type="text" id="season" placeholder="Season" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <textarea id="details" placeholder="Details" required></textarea>
+        <button type="submit">Post Crop</button>
+    </form>
+    <h3>Post Government Schemes</h3>
+    <form id="schemeForm">
+        <input type="text" id="schemeName" placeholder="Scheme Name" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <textarea id="eligibility" placeholder="Eligibility" required></textarea>
+        <textarea id="schemeDetails" placeholder="Details" required></textarea>
+        <button type="submit">Post Scheme</button>
+    </form>
+    <h3>Approve Farmer Scheme Requests</h3>
+    <div id="requests"></div>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+    <script src="assets/js/firebaseConfig.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
